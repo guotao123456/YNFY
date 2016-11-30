@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:itemview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/user_relative1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@mipmap/user_center_bg">
+
+                <bw.com.ynf.view.CricleImageView
+                    android:id="@+id/image_user"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/user_icon_no_set" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_user_login"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/user_relative1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/login_user_selector"
+                android:text="登录"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_relative1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="ynf_6446"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_qiandao"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tv_user_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_user_selector"
+                android:text="签到"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/user_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_relative1"
+                android:layout_marginTop="100dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:drawableTop="@mipmap/wait_pay"
+                    android:text="待付款"
+                    android:textColor="@color/colorGary" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:drawableTop="@mipmap/wait_send_good"
+                    android:text="待发货"
+                    android:textColor="@color/colorGary" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:drawableTop="@mipmap/wait_receive_good"
+                    android:text="待收货"
+                    android:textColor="@color/colorGary" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:drawableTop="@mipmap/wait_evaluate"
+                    android:text="待评价"
+                    android:textColor="@color/colorGary" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:drawableTop="@mipmap/wait_refund"
+                    android:text="退款"
+                    android:textColor="@color/colorGary" />
+
+            </LinearLayout>
+
+            <bw.com.ynf.view.ItemListView
+                android:id="@+id/my_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_linear"
+                itemview:leftImage="@mipmap/my_order_icon"
+                itemview:rightButton="@mipmap/order_confirm_next_icon"
+                itemview:titleColor="@color/colorGary"
+                itemview:titleSize="8sp"
+                itemview:titleText="我的订单" />
+
+            <bw.com.ynf.view.ItemListView
+                android:id="@+id/my_vip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_order"
+                itemview:leftImage="@mipmap/my_vip_icon"
+                itemview:rightButton="@mipmap/order_confirm_next_icon"
+                itemview:titleColor="@color/colorGary"
+                itemview:titleSize="8sp"
+                itemview:titleText="会员福利" />
+
+            <bw.com.ynf.view.ItemListView
+                android:id="@+id/my_invite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_vip"
+                itemview:leftImage="@mipmap/my_invite_gift_icon"
+                itemview:rightButton="@mipmap/order_confirm_next_icon"
+                itemview:titleColor="@color/colorGary"
+                itemview:titleSize="8sp"
+                itemview:titleText="邀请有礼" />
+
+            <bw.com.ynf.view.ItemListView
+                android:id="@+id/my_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_invite"
+                itemview:leftImage="@mipmap/my_coupon_icon"
+                itemview:rightButton="@mipmap/order_confirm_next_icon"
+                itemview:titleColor="@color/colorGary"
+                itemview:titleSize="8sp"
+                itemview:titleText="我的现金券" />
+
+            <bw.com.ynf.view.ItemListView
+                android:id="@+id/my_lottery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_coupon"
+                itemview:leftImage="@mipmap/my_lottery_icon"
+                itemview:rightButton="@mipmap/order_confirm_next_icon"
+                itemview:titleColor="@color/colorGary"
+                itemview:titleSize="8sp"
+                itemview:titleText="我的抽奖单" />
+
+            <bw.com.ynf.view.ItemListView
+                android:id="@+id/my_personal_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_lottery"
+                itemview:leftImage="@mipmap/personal_center_contact_service_icon"
+                itemview:rightButton="@mipmap/order_confirm_next_icon"
+                itemview:titleColor="@color/colorGary"
+                itemview:titleSize="8sp"
+                itemview:titleText="联系客服" />
+
+            <bw.com.ynf.view.ItemListView
+                android:id="@+id/my_collection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_personal_center"
+                itemview:leftImage="@mipmap/my_collection_icon"
+                itemview:rightButton="@mipmap/order_confirm_next_icon"
+                itemview:titleColor="@color/colorGary"
+                itemview:titleSize="8sp"
+                itemview:titleText="我收藏的商品" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
