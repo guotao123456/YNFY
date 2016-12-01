@@ -5,7 +5,11 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Process;
 
+import com.zhy.autolayout.config.AutoLayoutConifg;
+
 import org.xutils.x;
+
+import bw.com.ynf.utils.ImageLoaderUtils;
 
 /**
  * autour: 郭涛
@@ -29,6 +33,8 @@ public class MyApplication extends Application {
         x.Ext.init(this);
         //设置是debug模式
         x.Ext.setDebug(true);
+        AutoLayoutConifg.getInstance().useDeviceSize();
+        ImageLoaderUtils.initConfiguration(getApplicationContext());
     }
 
     public static int getMainThreadId() {

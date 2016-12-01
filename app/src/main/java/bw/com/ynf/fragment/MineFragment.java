@@ -40,7 +40,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     }
     @Override
     protected View createSuccessView() {
-        return null;
+         return null;
     }
     @Nullable
     @Override

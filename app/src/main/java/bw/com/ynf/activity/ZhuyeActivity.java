@@ -5,12 +5,15 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
+
 import bw.com.ynf.R;
 import bw.com.ynf.factory.FragmentFactory;
 import bw.com.ynf.view.MyNoViewPager;
+
 public class ZhuyeActivity extends AppCompatActivity {
     private MyNoViewPager viewPager;
     private RadioGroup rg_zhuye;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

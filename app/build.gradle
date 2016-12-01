@@ -26,4 +26,7 @@ dependencies {
     compile files('libs/gson-2.2.4.jar')
     compile files('libs/universal-image-loader-1.9.5.jar')
     compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile files('libs/android-support-v7-recyclerview.jar')
 }

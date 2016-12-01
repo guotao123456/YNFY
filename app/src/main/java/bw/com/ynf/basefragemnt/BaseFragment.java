@@ -27,7 +27,7 @@ public abstract class BaseFragment extends Fragment {
             protected void onload() {
                 //进行加载
                 //进行抽象
-                BaseFragment.this.onLoad();
+
             }
 
             @Override
@@ -35,6 +35,7 @@ public abstract class BaseFragment extends Fragment {
                 return BaseFragment.this.createSuccessView();
             }
         };
+        BaseFragment.this.onLoad();
         return showingPage;
     }
     /**
